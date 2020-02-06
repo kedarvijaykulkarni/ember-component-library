@@ -1,0 +1,29 @@
+$default-animation-duration: .2s;
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+%animation-fadein {
+  animation: fadein $default-animation-duration;
+}
+
+@keyframes grow {
+  from {
+    transform: translate3d(0, 0, 0) scale(.5, .5);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) scale(1, 1);
+  }
+}
+
+%animation-grow {
+  animation: grow $default-animation-duration;
+}

@@ -1,0 +1,18 @@
+<h1>sc-switch</h1>
+<p>Use sc-switch to toggle the state of a single setting on or off</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-switch.hbs"}}
+    <ScSwitch
+      @checked={{checked1}}
+      @click={{action (mut checked1) (not checked1)}}
+    />
+    <ScSwitch
+      @color="accent-1"
+      @checked={{checked2}}
+      @click={{action (mut checked2) (not checked2)}}
+    />
+  {{/demo.example}}
+  {{demo.snippet "sc-switch.hbs"}}
+{{/docs-demo}}
+
+<ColorAside/>

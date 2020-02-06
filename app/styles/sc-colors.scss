@@ -1,0 +1,58 @@
+$color-white: #fff;
+$color-black: #000;
+$color-off-black: #1c1c1c;
+$color-lightest-gray: #f5f7fa;
+$color-light-gray: #e1e1e1;
+$color-gray: #a7a7a7;
+$color-dark-gray: #4f4f4f;
+$color-primary: #0072CE;
+$color-accent-1: #008A25;
+$color-accent-2: #FEE32B;
+$color-accent-3: #FFB300;
+$color-accent-4: #E60F45;
+
+.color-white          { color: $color-white;         }
+.color-black          { color: $color-black;         }
+.color-lightest-gray  { color: $color-lightest-gray; }
+.color-light-gray     { color: $color-light-gray;    }
+.color-gray           { color: $color-gray;          }
+.color-dark-gray      { color: $color-dark-gray;     }
+.color-primary        { color: $color-primary;       }
+.color-accent-1       { color: $color-accent-1;      }
+.color-accent-2       { color: $color-accent-2;      }
+.color-accent-3       { color: $color-accent-3;      }
+.color-accent-4       { color: $color-accent-4;      }
+
+.bg-white           { background-color: $color-white;          }
+.bg-lightest-gray   { background-color: $color-lightest-gray;  }
+.bg-light-gray      { background-color: $color-light-gray;     }
+.bg-gray            { background-color: $color-gray;           }
+.bg-dark-gray       { background-color: $color-dark-gray;      }
+.bg-primary         { background-color: $color-primary;        }
+.bg-accent-1        { background-color: $color-accent-1;       }
+.bg-accent-2        { background-color: $color-accent-2;       }
+.bg-accent-3        { background-color: $color-accent-3;       }
+.bg-accent-4        { background-color: $color-accent-4;       }
+
+
+@mixin color-modifier() {
+  $modifiers: (
+    "white": $color-white,
+    "black": $color-black,
+    lightest-gray: $color-lightest-gray,
+    light-gray: $color-light-gray,
+    "gray": $color-gray,
+    dark-gray: $color-dark-gray,
+    primary: $color-primary,
+    accent-1: $color-accent-1,
+    accent-2: $color-accent-2,
+    accent-3: $color-accent-3,
+    accent-4: $color-accent-4
+  );
+
+  @each $modifier, $color in $modifiers {
+    &--#{$modifier} {
+      @extend .color-#{$modifier};
+    }
+  }
+}

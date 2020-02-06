@@ -1,0 +1,33 @@
+{{#sc-heading}}Heading{{/sc-heading}}
+
+{{#sc-heading size=2}}Heading Sizes{{/sc-heading}}
+
+<p>Size can be customized with the <code>size</code> attribute.</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="heading-demo-default.hbs"}}
+    {{#sc-heading size=1}}Test{{/sc-heading}}
+    {{#sc-heading size=2}}Test{{/sc-heading}}
+    {{#sc-heading size=3}}Test{{/sc-heading}}
+    {{#sc-heading size=4}}Test{{/sc-heading}}
+    {{#sc-heading size=5}}Test{{/sc-heading}}
+    {{#sc-heading size=6}}Test{{/sc-heading}}
+  {{/demo.example}}
+  {{demo.snippet "heading-demo-default.hbs"}}
+{{/docs-demo}}
+
+{{#sc-heading size=2}}Heading Colors{{/sc-heading}}
+
+<p>Color can be customized with the <code>color</code> attribute.</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="heading-demo-colors.hbs"}}
+    {{#sc-heading}}Test{{/sc-heading}}
+    {{#sc-heading color="primary"}}Test{{/sc-heading}}
+    {{#sc-heading color="accent-1"}}Test{{/sc-heading}}
+    {{#sc-heading color="accent-2"}}Test{{/sc-heading}}
+    {{#sc-heading color="accent-3"}}Test{{/sc-heading}}
+    {{#sc-heading color="accent-4"}}Test{{/sc-heading}}
+  {{/demo.example}}
+  {{demo.snippet "heading-demo-colors.hbs"}}
+{{/docs-demo}}

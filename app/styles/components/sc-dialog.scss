@@ -1,0 +1,49 @@
+.sc-dialog {
+  &__dialog {
+    @extend .flex, .justify-center, .items-center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  $padding: 20px 25px;
+
+  &__backdrop {
+    @extend %animation-fadein;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(1, 1, 1, .48);
+  }
+
+  &__inner {
+    @extend .flex, .flex-column, .w-100, .h-100, %md-shadow, %animation-grow;
+    background: $white;
+    z-index: 1;
+
+    @media (min-width: $break-mobile) {
+      width: auto;
+      height: auto;
+      max-width: 600px;
+      max-height: 80%;
+    }
+  }
+
+  &__header, &__footer {
+    @extend .flex, .w-100, .justify-between, .items-center, .bg-primary;
+    padding: $padding;
+  }
+
+  &__content {
+    @extend .db;
+    padding: $padding;
+    overflow: auto;
+  }
+}

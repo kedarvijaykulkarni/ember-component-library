@@ -1,0 +1,11 @@
+{{#sc-card as |card|}}
+  {{#card.title}}{{title}}{{/card.title}}
+  {{#card.content}}
+    {{yield
+      (hash
+        example =(component "sc-component-demo/example")
+        code =(component "sc-component-demo/code")
+      )
+    }}
+  {{/card.content}}
+{{/sc-card}}

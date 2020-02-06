@@ -1,0 +1,87 @@
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/
+
+/*
+Fonts.com Helvetica
+*/
+
+@import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=cf499ac3-f0f0-4ed6-9fe1-1ac07022e627");
+@font-face{
+  font-family:"ITC Avant Garde Gothic W01_n3";
+  src:url("/ember-component-library/fonts/07413afc-2280-4cfc-8860-184839a93fa4.eot?#iefix") format("eot")
+}
+
+@font-face{
+  font-family:"ITC Avant Garde Gothic W01";
+  src:url("/ember-component-library/fonts/07413afc-2280-4cfc-8860-184839a93fa4.eot?#iefix");
+  src:url("/ember-component-library/fonts/07413afc-2280-4cfc-8860-184839a93fa4.eot?#iefix") format("eot"),url("/ember-component-library/fonts/6f1146c0-9c0b-4949-866d-9affc396531f.woff2") format("woff2"),url("/ember-component-library/fonts/2c50f982-bb73-4891-8d0e-587c1136c2e5.woff") format("woff"),url("/ember-component-library/fonts/abf065fe-a1ab-4013-8c49-45ce7f8ac828.ttf") format("truetype");
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face{
+  font-family:"ITC Avant Garde Gothic W01_n7";
+  src:url("/ember-component-library/fonts/7882e98f-91dc-4562-9ae7-89142461ea7d.eot?#iefix") format("eot")
+}
+
+@font-face{
+  font-family:"ITC Avant Garde Gothic W01";
+  src:url("/ember-component-library/fonts/7882e98f-91dc-4562-9ae7-89142461ea7d.eot?#iefix");
+  src:url("/ember-component-library/fonts/7882e98f-91dc-4562-9ae7-89142461ea7d.eot?#iefix") format("eot"),url("/ember-component-library/fonts/4cadb55f-822a-4a35-8918-becfc5a866a3.woff2") format("woff2"),url("/ember-component-library/fonts/af007af5-dcfa-465a-a278-47ab3eb9a589.woff") format("woff"),url("/ember-component-library/fonts/9a9365bb-bc37-4768-8d00-df0bdf405665.ttf") format("truetype");
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face{
+  font-family:"Neue Helvetica W01_n4";
+  src:url("/ember-component-library/fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix") format("eot")
+}
+
+@font-face{
+  font-family:"Neue Helvetica W01";
+  src:url("/ember-component-library/fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix");
+  src:url("/ember-component-library/fonts/bf7ef4ce-de2a-4213-a9d7-826a3ee323cd.eot?#iefix") format("eot"),url("/ember-component-library/fonts/3dac71eb-afa7-4c80-97f0-599202772905.woff2") format("woff2"),url("/ember-component-library/fonts/34e0e4c0-c294-49bb-9a8e-1b2cafd54e32.woff") format("woff"),url("/ember-component-library/fonts/8a8bfee3-197c-4942-9b11-71508cc9f406.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face{
+  font-family:"Neue Helvetica W01_n7";
+  src:url("/ember-component-library/fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix") format("eot")
+}
+
+@font-face{
+  font-family:"Neue Helvetica W01";
+  src:url("/ember-component-library/fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix");
+  src:url("/ember-component-library/fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix") format("eot"),url("/ember-component-library/fonts/1f4274cd-2674-481e-9023-69e33ffca161.woff2") format("woff2"),url("/ember-component-library/fonts/5e8d493c-be01-44b9-962e-504a5cf10dd8.woff") format("woff"),url("/ember-component-library/fonts/ae36b4a0-aa2c-46cc-98d8-d8b7d22241dc.ttf") format("truetype");
+font-weight: 700;
+font-style: normal;
+}
+
+/*
+Material Design Icons
+*/
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/ember-component-library/fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/ember-component-library/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+       url(/ember-component-library/fonts/MaterialIcons-Regular.woff) format('woff'),
+       url(/ember-component-library/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+/*
+Font Classes
+*/
+
+.sc-font-avant-garde {
+  font-family: 'ITC Avant Garde Gothic W01', sans-serif;
+}

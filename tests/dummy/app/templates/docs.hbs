@@ -1,0 +1,30 @@
+{{#docs-viewer as |viewer|}}
+
+  {{#viewer.nav as |nav|}}
+    {{nav.section "Introduction"}}
+    {{nav.item "Usage" "docs.index"}}
+    {{nav.section "Styles"}}
+    {{nav.item "Colors" "docs.sc-colors"}}
+    {{nav.item "Tooltip" "docs.tooltips"}}
+    {{nav.section "Helpers"}}
+    {{nav.item "Currency display" "docs.currency-display"}}
+    {{nav.section "Components"}}
+    {{nav.item "Button" "docs.sc-button"}}
+    {{nav.item "Card" "docs.sc-card"}}
+    {{nav.item "Checkbox" "docs.sc-checkbox"}}
+    {{nav.item "Dialog" "docs.sc-dialog"}}
+    {{nav.item "Divider" "docs.sc-divider"}}
+    {{nav.item "Heading" "docs.sc-heading"}}
+    {{nav.item "Icon" "docs.sc-md-icon"}}
+    {{nav.item "Input" "docs.sc-input"}}
+    {{nav.item "Radio" "docs.sc-radio"}}
+    {{nav.item "Support" "docs.sc-support"}}
+    {{nav.item "Switch" "docs.sc-switch"}}
+    {{nav.item "Table" "docs.sc-table"}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    {{outlet}}
+  {{/viewer.main}}
+
+{{/docs-viewer}}

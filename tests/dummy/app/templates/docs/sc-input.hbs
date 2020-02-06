@@ -1,0 +1,39 @@
+<h1>sc-input</h1>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-input-demo-default.hbs"}}
+    {{#sc-input
+      label="First name"
+      value=firstName
+      onChange=(action (mut firstName))
+    }}
+      Caption Text
+    {{/sc-input}}
+    {{sc-input label="Last name" value=lastName onChange=(action (mut lastName))}}
+    <br>
+    {{#sc-input icon-left="search" label="Input 1"}}Caption Text{{/sc-input}}
+    <br>
+    {{#sc-input icon-left="search" icon-right="remove_red_eye" label="Input 1"}}Caption Text{{/sc-input}}
+    <br>
+    {{#sc-input icon-right="remove_red_eye" label="Input 1"}}Caption Text{{/sc-input}}
+    <br>
+    {{#sc-input
+      class="w-100"
+      icon-right="remove_red_eye"
+      label="Input 1"
+    }}
+      Caption Text
+    {{/sc-input}}
+    <br>
+    {{#sc-input value=lastName icon-right="remove_red_eye" label="Input 1"}}Caption Text{{/sc-input}}
+    <br>
+    {{sc-input
+      value=clearable
+      icon-right="cancel"
+      label="Clearable"
+      onIconRightClick=(action (mut clearable) "")
+      onChange=(action (mut clearable))
+    }}
+  {{/demo.example}}
+  {{demo.snippet "sc-input-demo-default.hbs"}}
+{{/docs-demo}}

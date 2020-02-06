@@ -1,0 +1,55 @@
+.sc-radio {
+  $self: &;
+  @extend .flex, .mb3, .pointer;
+
+  &--disabled {
+    pointer-events: none;
+
+    .sc-radio__label {
+      opacity: .38;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    #{$self}__radio {
+      @extend .md-shadow;
+    }
+  }
+
+  &__radio {
+    @extend .flex, .mr3;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid $gray;
+    border-radius: 100px;
+    transition: .2s;
+
+    &:after {
+      content: '';
+      width: 0px;
+      height: 0px;
+      background: transparent;
+      display: block;
+      border-radius: 100px;
+      margin: auto;
+      transition: .2s;
+    }
+
+    #{$self}--checked & {
+      border-color: $color-primary;
+
+      &:after {
+        background: $color-primary;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__label {
+    @extend .flex, .flex-column;
+  }
+}

@@ -1,0 +1,46 @@
+.sc-switch {
+  $switch-track-width: 34px;
+  $switch-track-height: 14px;
+  $switch-handle-diameter: 20px;
+
+  height: $switch-handle-diameter;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  .transition {
+    transition: all 100ms linear;
+  }
+
+  .switch-track {
+    width: $switch-track-width;
+    height: $switch-track-height;
+    border-radius: $switch-track-width;
+    opacity: .5;
+
+    @extend .transition;
+  }
+
+  .switch-handle {
+    width: $switch-handle-diameter;
+    height: $switch-handle-diameter;
+    position: absolute;
+    left: 0;
+    border-radius: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+
+    @extend .transition;
+  }
+
+  .switch-label {
+    margin-left: 10px;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;
+  }
+
+  &--checked {
+    .switch-handle {
+      left: $switch-track-width - $switch-handle-diameter;
+    }
+  }
+}

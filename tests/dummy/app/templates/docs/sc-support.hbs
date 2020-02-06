@@ -1,0 +1,22 @@
+<ScHeading>sc-support</ScHeading>
+<p>Renders a simple customer support template</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="currency-display.hbs"}}
+    <ScHeading>Generic default</ScHeading>
+    <ScSupport/>
+
+    <ScHeading>Customized:</ScHeading>
+    <ScSupport as |Support|>
+      <style>
+        .wrapper {
+          background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        }
+      </style>
+      <ScHeading class="wrapper flex justify-center" @size="2">
+        Email:&nbsp;<Support.email />&nbsp;Phone:&nbsp;<Support.phone />
+      </ScHeading> 
+    </ScSupport>
+    
+  {{/demo.example}}
+  {{demo.snippet "currency-display.hbs"}}
+{{/docs-demo}}

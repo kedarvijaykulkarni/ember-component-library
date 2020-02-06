@@ -1,0 +1,147 @@
+.sc-button {
+  $self: &;
+  @extend .dib, .content-center, .ph3, .b, .color-primary, .pointer,  %md-shadow;
+
+  font-size: $sc-font-size-l;
+  background-color: #fff;
+  border-radius: $sc-border-radius;
+  border: none;
+  position: relative;
+  transition: background .2s;
+  white-space: nowrap;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    background-color: $color-light-gray;
+    cursor: default;
+    color: $color-gray;
+    pointer-events: none;
+  }
+
+  &:active, &:focus {
+    background-color: darken(#fff, 10%);
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken(#fff, 10%);
+  }
+
+  $modifiers: (
+    primary: $color-primary,
+    light-gray: $color-light-gray,
+    gray: $color-gray,
+    dark-gray: $color-dark-gray,
+    black: $color-black,
+    accent-1: $color-accent-1,
+    accent-2: $color-accent-2,
+    accent-3: $color-accent-3,
+    accent-4: $color-accent-4
+  );
+
+  @each $modifier, $color in $modifiers {
+    &--#{"" + $modifier} {
+      background-color: $color;
+      color: #fff;
+
+      &:hover, &:active, &:focus {
+        background-color: darken($color, 10%);
+        outline: none;
+      }
+    }
+  }
+
+  &#{$self}--small {
+    @extend .small;
+  }
+
+  &--light-gray {
+    color: $color-black;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    box-shadow: none;
+
+    &:hover, &:active, &:focus {
+      background-color: rgba(1, 1, 1, .1);
+    }
+
+    @each $modifier, $color in $modifiers {
+      &#{$self}--#{"" + $modifier} {
+        border-color: $color;
+        color: $color;
+      }
+    }
+  }
+
+  &--text {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $color-white;
+
+    &:hover, &:active, &:focus {
+      background-color: rgba(1, 1, 1, .1);
+    }
+
+    &:disabled {
+      background: none;
+    }
+
+    @each $modifier, $color in $modifiers {
+      &#{$self}--#{"" + $modifier} {
+        color: $color;
+      }
+    }
+  }
+
+  &--link {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $color-primary;
+    padding: 0;
+    display: inline;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $color-primary;
+    }
+
+    @each $modifier, $color in $modifiers {
+      &#{$self}--#{"" + $modifier} {
+        color: $color;
+      }
+    }
+  }
+
+  &--icon {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 100px;
+  }
+
+  &__icon {
+    vertical-align: middle;
+
+    &--left {
+      @extend .mr2;
+    }
+
+    &--right {
+      @extend .ml2;
+    }
+  }
+}

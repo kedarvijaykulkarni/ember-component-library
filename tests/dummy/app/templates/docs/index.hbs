@@ -1,0 +1,23 @@
+<h1>Usage</h1>
+<p>The purpose of the <code>ember-component-library</code> is to provide a collection of standardized styles and components to be used across all of our frontend products.</p>
+<p>This documentation serves as a reference point for all team members and aims to establish a common vocabulary to facilitate comunications between developers and designers.</p>
+
+<h2>Develop</h2>
+
+<p>To get started, add the following to your app's <code>package.json</code>:</p>
+
+<p>
+  {{#docs-snippet name="package"}}
+    "ember-component-library": "git+ssh://git@github.com:kedarvijaykulkarni/ember-component-library.git#master"
+  {{/docs-snippet}}
+</p>
+
+<p>Referencing the github repository directly lets us keep our code private.</p>
+
+<p>After pulling the code, you'll have to manually run the ember addon's blueprint. Usually this happens when running <code>ember install</code>, but since we are keeping things private you'll have to do it manualy with:</p>
+
+<p>
+  {{#docs-snippet name="blueprint"}}
+    ember g ember-component-library index
+  {{/docs-snippet}}
+</p>

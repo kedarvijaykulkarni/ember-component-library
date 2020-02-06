@@ -1,0 +1,17 @@
+<h1>sc-radio</h1>
+<p>Use sc-radio to make a selection from a list</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-radio.hbs"}}
+    <ScRadio
+      @checked={{eq account.type "checking"}}
+      @click={{action (mut account.type) "checking"}}
+      @label="Checking account"
+    />
+    <ScRadio
+      @checked={{eq account.type "savings"}}
+      @click={{action (mut account.type) "savings"}}
+      @label="Savings account"
+    />
+  {{/demo.example}}
+  {{demo.snippet "sc-radio.hbs"}}
+{{/docs-demo}}

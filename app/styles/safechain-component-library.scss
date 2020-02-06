@@ -1,0 +1,46 @@
+@import 'ember-basic-dropdown';
+@import 'sc-variables';
+@import 'sc-grid';
+@import 'tachyons';
+@import 'pikaday';
+@import 'sc-utils';
+@import 'sc-fonts';
+@import 'sc-colors';
+@import 'sc-animations';
+@import 'sc-tooltip';
+
+$break-mobile: 480px;
+
+*, *::before, *::after {
+  border-width: 0;
+  border-style: solid;
+}
+
+html, body {
+  font-family: "Neue Helvetica W01";
+  font-weight: normal;
+  color: $color-off-black;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  @extend .b;
+  text-decoration: none;
+  color: $color-primary;
+}
+
+p {
+  @extend .mv3;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+small, .small {
+  font-size: $sc-font-size-sm;
+}
+
+@import 'sc-components';

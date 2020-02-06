@@ -1,0 +1,18 @@
+{{sc-input
+  label=label
+  value=selected
+  hasFocus=isOpen
+  icon-right="arrow_drop_down"
+  error=error
+  isTouched=isTouched
+}}
+{{#if isOpen}}
+  <div class="{{baseClass}}__options">
+    {{yield
+      (hash
+        option=(component "sc-select/option" onClick=(action "selectOption"))
+        Option=(component "sc-select/option" onClick=(action "selectOption"))
+      )
+    }}
+  </div>
+{{/if}}

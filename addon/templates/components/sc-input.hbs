@@ -1,0 +1,51 @@
+{{#if label}}
+  <label class="{{baseClass}}__label">{{label}}</label>
+{{/if}}
+
+{{#if (and icon-left (not isIconLeftPlaceholder))}}
+  {{sc-md-icon
+    icon-left
+    class=(concat (concat baseClass "__icon") " " (concat baseClass "__icon--left"))
+    click=onIconLeftClick
+  }}
+{{/if}}
+
+<input
+  class     ="{{baseClass}}__field"
+  type      ={{type}}
+  disabled  ={{disabled}}
+  autofocus ={{autofocus}}
+  onblur    ={{action "handleBlur"}}
+  oninput   ={{action "handleInput"}}
+  value     ={{internalValue}}
+  maxlength ={{max-length}}
+  showlength ={{show-length}}
+>
+
+{{#if icon-right}}
+  {{sc-md-icon
+    icon-right
+    class=(concat (concat baseClass "__icon") " " (concat baseClass "__icon--right"))
+    click=onIconRightClick
+  }}
+{{/if}}
+
+<div class="{{baseClass}}__caption">
+  <small>
+    {{#if hasErrors}}
+      {{#if (not (eq error true))}}
+        {{error}}
+      {{/if}}
+    {{else if caption}}
+      {{caption}}
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </small>
+  <small class="flex-auto"></small>
+
+  {{#if (and max-length showInputLength)}}
+    <small>{{maxLengthString}}</small>
+  {{/if}}
+</div>
+

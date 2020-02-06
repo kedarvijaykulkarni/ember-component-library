@@ -1,0 +1,13 @@
+<ScHeading @size="1">currency-display</ScHeading>
+<p>Format numbers for display as currency</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="currency-display.hbs"}}
+    <div>
+      ${{currency-display 100}}
+    </div>
+    <div>
+      ${{currency-display 10000000}}
+    </div>
+  {{/demo.example}}
+  {{demo.snippet "currency-display.hbs"}}
+{{/docs-demo}}

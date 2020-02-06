@@ -1,0 +1,33 @@
+<h1>data-tooltip</h1>
+<p>Use the attribute <code>data-tooltip="tooltip copy"</code> to attach a tooltip to your html element</p>
+
+<p>Use the attribute <code>data-tooltop-flow="up|down|left|right"</code> to select the side your tooltip will render on ("up" is the default)</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-switch.hbs"}}
+    <div class="flex flex-column justify-around items-center">
+      <div class="bg-gray ma3">
+        <span data-tooltip="I'm up above it!">Up</span>
+      </div>
+      <div class="flex justify-around">
+        <span
+          class="bg-gray ma3"
+          data-tooltip="Slide to the left"
+          data-tooltip-flow="left"
+        >
+          Left
+        </span>
+        <span
+          class="bg-gray ma3"
+          data-tooltip="Slide to the right"
+          data-tooltip-flow="right"
+        >
+          Right
+        </span>
+      </div>
+      <div class="bg-gray ma3">
+        <span data-tooltip="Get Down." data-tooltip-flow="down">Down</span>
+      </div>
+    </div>
+  {{/demo.example}}
+  {{demo.snippet "sc-switch.hbs"}}
+{{/docs-demo}}

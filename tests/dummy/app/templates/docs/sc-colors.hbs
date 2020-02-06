@@ -1,0 +1,19 @@
+<h1>Colors</h1>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-colors.hbs"}}
+    <p>Use `class=bg-YOUR_COLOR` to color a background </p>
+    {{#each colors as |color|}}
+      <div class="bg-{{color}}">
+        My background is {{color}}
+      </div>
+    {{/each}}
+    <p>Use `class="color-YOUR_COLOR"` to color the text </p>
+    {{#each colors as |color|}}
+      <div class="color-{{color}}">
+        I'm {{color}}!
+      </div>
+    {{/each}}
+  {{/demo.example}}
+  {{demo.snippet "sc-colors.hbs"}}
+{{/docs-demo}}

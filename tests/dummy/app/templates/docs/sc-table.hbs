@@ -1,0 +1,41 @@
+<ScHeading @size="1">sc-table</ScHeading>
+<p>Display sets of data</p>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="sc-table.hbs"}}
+    <ScInput
+      @label="Search"
+      @value={{searchValue}}
+      @onChange={{action (mut searchValue)}}
+    />
+    {{#let
+      (array
+        (hash attr="name" name="Name")
+        (hash attr="role" name="Role")
+        (hash attr="fullTime" name="Full time")
+      )
+      (array "name" "role" "fullTime")
+    as |sortHeaders searchFields|
+    }}
+      <ScTable
+        @data={{developers}}
+        @sortHeaders={{sortHeaders}}
+        @searchValue={{searchValue}}
+        @searchFields={{searchFields}} as |Table|
+      >
+        <Table.header as |Header|>
+          {{!--sortable headers are created automatically - additional headers in the block will be added to the end--}}
+          <Header.th>Actions</Header.th>
+        </Table.header>
+        {{#each Table.displayData as |developer|}}
+          <Table.row>
+            <td>{{developer.name}}</td>
+            <td>{{developer.role}}</td>
+            <td>{{sc-checkbox checked=developer.fullTime}}</td>
+            <td><ScButton @text={{true}} @color="dark-gray" @icon="more_vert"></ScButton></td>
+          </Table.row>
+        {{/each}}
+      </ScTable>
+    {{/let}}
+  {{/demo.example}}
+  {{demo.snippet "sc-table.hbs"}}
+{{/docs-demo}}

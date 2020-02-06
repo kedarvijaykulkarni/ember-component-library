@@ -1,0 +1,34 @@
+.sc-heading {
+  @extend .mt0;
+  @include color-modifier();
+}
+
+h1.sc-heading {
+  @extend .sc-font-avant-garde, .font-size-xxl, .normal;
+  margin-bottom: 1.25rem;
+}
+
+h2.sc-heading--2 {
+  @extend .font-size-xl;
+  margin-bottom: 19.5px;
+}
+
+h3.sc-heading {
+  @extend .font-size-l;
+  margin-bottom: 16.5px;
+}
+
+h4.sc-heading {
+  @extend .font-size-m;
+  margin-bottom: 15px;
+}
+
+h5.sc-heading {
+  @extend .font-size-sm;
+  margin-bottom: 13.5px;
+}
+
+h6.sc-heading {
+  @extend .font-size-xs;
+  margin-bottom: 12px;
+}

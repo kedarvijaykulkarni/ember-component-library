@@ -1,0 +1,15 @@
+{{#ember-wormhole to="ember-component-library-wormhole"}}
+  <div class="{{baseClass}}__dialog" ...attributes>
+    <div class="{{baseClass}}__backdrop"></div>
+    <div class="{{baseClass}}__inner">
+      {{yield
+        (hash
+          header  =(component "sc-dialog/header")
+          content =(component "sc-dialog/content")
+          Content =(component "sc-dialog/content")
+          footer  =(component "sc-dialog/footer")
+        )
+      }}
+    </div>
+  </div>
+{{/ember-wormhole}}

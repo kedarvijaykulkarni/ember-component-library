@@ -1,0 +1,21 @@
+.sc-card {
+  @extend .flex, .flex-column, .mb4, .justify-between;
+  border-radius: $sc-border-radius;
+
+  &__content {
+    @extend .pa3, .mt0, .flex-grow-1;
+    overflow: auto;
+  }
+
+  &__title {
+    @extend .pa3, .pb0, .mt0, .mb0, .flex;
+  }
+
+  &__footer {
+    @extend .pa3, .mt0, .flex;
+  }
+
+  &--raised {
+    @extend .bg-white, %md-shadow;
+  }
+}

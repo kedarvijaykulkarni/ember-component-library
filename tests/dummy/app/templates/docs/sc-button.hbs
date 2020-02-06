@@ -1,0 +1,226 @@
+<h1>sc-button</h1>
+<p class="mb4">The sc-button component comes with a number of options to customize it's style</p>
+
+{{#sc-component-demo title="Button colors" as |demo|}}
+  <p class="mb3">You can set the <code>color</code> to one of five colors <code>primary, accent-1, accent-2, accent-3, accent-4.</code></p>
+  {{#demo.example}}
+    {{#button-table as |table|}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button color="primary" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button color="accent-1" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button color="accent-2" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button color="accent-3" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button color="accent-4" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+    {{/button-table}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="button_default"}}
+      {{#sc-button}}Click Me{{/sc-button}}
+      {{#sc-button color="accent-1"}}Click Me{{/sc-button}}
+      {{#sc-button color="accent-2"}}Click Me{{/sc-button}}
+      {{#sc-button color="accent-3"}}Click Me{{/sc-button}}
+      {{#sc-button color="accent-4"}}Click Me{{/sc-button}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+
+{{#sc-component-demo title="Button outline" as |demo|}}
+  <p class="mb3">You can set the <code>outline</code> attribute to <code>true</code> to change the style of the button. This attribute can be combined with <code>color</code>.</p>
+  {{#demo.example}}
+    {{#button-table as |table|}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button outline=true click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button outline=true click=(action "onClick") color="primary"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button outline=true click=(action "onClick") color="accent-1"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button outline=true click=(action "onClick") color="accent-2"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button outline=true click=(action "onClick") color="accent-3"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button outline=true click=(action "onClick") color="accent-4"}}Click Me{{/sc-button}}
+      {{/table.row}}
+    {{/button-table}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="button_outline"}}
+      {{#sc-button outline=true}}Click Me{{/sc-button}}
+      {{#sc-button outline=true color="accent-1"}}Click Me{{/sc-button}}
+      {{#sc-button outline=true color="accent-2"}}Click Me{{/sc-button}}
+      {{#sc-button outline=true color="accent-3"}}Click Me{{/sc-button}}
+      {{#sc-button outline=true color="accent-4"}}Click Me{{/sc-button}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+
+{{#sc-component-demo title="Button text" as |demo|}}
+  {{#demo.example}}
+    {{#button-table as |table|}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button text=true click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button text=true click=(action "onClick") color="primary"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button text=true click=(action "onClick") color="accent-1"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button text=true click=(action "onClick") color="accent-2"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button text=true click=(action "onClick") color="accent-3"}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row}}
+        {{#sc-button text=true click=(action "onClick") color="accent-4"}}Click Me{{/sc-button}}
+      {{/table.row}}
+    {{/button-table}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="button_text"}}
+      {{#sc-button text=true}}Click Me{{/sc-button}}
+      {{#sc-button text=true color="primary"}}Click Me{{/sc-button}}
+      {{#sc-button text=true color="accent-1"}}Click Me{{/sc-button}}
+      {{#sc-button text=true color="accent-2"}}Click Me{{/sc-button}}
+      {{#sc-button text=true color="accent-3"}}Click Me{{/sc-button}}
+      {{#sc-button text=true color="accent-4"}}Click Me{{/sc-button}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+
+{{#sc-component-demo title="Button with icons" as |demo|}}
+  {{#demo.example}}
+    {{#button-table class="bg-primary" as |table|}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button icon-left="arrow_back" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button icon-right="arrow_forward" click=(action "onClick")}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          icon-left="arrow_back"
+          icon-right="arrow_forward"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          outline=true
+          icon-left="arrow_back"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          outline=true
+          icon-right="arrow_forward"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          outline=true
+          icon-left="arrow_back"
+          icon-right="arrow_forward"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          text=true
+          icon-left="arrow_back"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          text=true
+          icon-right="arrow_forward"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button
+          text=true
+          icon-left="arrow_back"
+          icon-right="arrow_forward"
+          click=(action "onClick")
+        }}
+          Click Me
+        {{/sc-button}}
+      {{/table.row}}
+    {{/button-table}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="button_icons"}}
+      {{#sc-button icon-left="arrow_back"}}Click Me{{/sc-button}}
+      {{#sc-button icon-right="arrow_forward"}}Click Me{{/sc-button}}
+      {{#sc-button icon-left="arrow_back" icon-right="arrow_forward"}}Click Me{{/sc-button}}
+
+      {{#sc-button outline=true icon-left="arrow_back"}}Click Me{{/sc-button}}
+      {{#sc-button outline=true icon-right="arrow_forward"}}Click Me{{/sc-button}}
+      {{#sc-button outline=true icon-left="arrow_back" icon-right="arrow_forward"}}Click Me{{/sc-button}}
+
+      {{#sc-button text=true icon-left="arrow_back"}}Click Me{{/sc-button}}
+      {{#sc-button text=true icon-right="arrow_forward"}}Click Me{{/sc-button}}
+      {{#sc-button text=true icon-left="arrow_back" icon-right="arrow_forward"}}Click Me{{/sc-button}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+
+{{#sc-component-demo title="Button disabled" as |demo|}}
+  {{#demo.example}}
+    {{#button-table class="bg-primary" as |table|}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button disabled=true}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button outline=true disabled=true}}Click Me{{/sc-button}}
+      {{/table.row}}
+      {{#table.row class="bg-primary"}}
+        {{#sc-button text=true disabled=true}}Click Me{{/sc-button}}
+      {{/table.row}}
+    {{/button-table}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="button_disabled"}}
+      {{#sc-button disabled=true}}Click Me{{/sc-button}}
+      {{#sc-button disabled=true color="accent-1"}}Click Me{{/sc-button}}
+      {{#sc-button disabled=true color="accent-2"}}Click Me{{/sc-button}}
+      {{#sc-button disabled=true color="accent-3"}}Click Me{{/sc-button}}
+      {{#sc-button disabled=true color="accent-4"}}Click Me{{/sc-button}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+

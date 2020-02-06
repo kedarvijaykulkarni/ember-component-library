@@ -1,0 +1,18 @@
+{{#if hasBlock}}
+  {{yield
+    (hash
+      email=(component
+        "sc-support/anchor"
+        href=(concat "mailto:" email)
+        text=email
+      )
+      phone=(component
+        "sc-support/anchor"
+        href=(concat "tel:" phone)
+        text=phone
+      )
+    )
+  }}
+{{else}}
+  <p>If you need help, contact the SafeWire Support Team at {{component "sc-support/anchor" href=(concat "mailto:" email) text=email}} or call {{component "sc-support/anchor" href=(concat "tel:" phone) text=phone}}</p>
+{{/if}}

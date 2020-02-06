@@ -1,0 +1,27 @@
+$sc-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+$sc-border-radius: 4px;
+$sc-font-size-xxl: 28px;
+$sc-font-size-xl:  20px;
+$sc-font-size-l:   16px;
+$sc-font-size-m:   14px;
+$sc-font-size-sm:  12px;
+$sc-font-size-xs:  10px;
+
+.font-size-xxl { font-size: $sc-font-size-xxl; }
+.font-size-xl { font-size: $sc-font-size-xl };
+.font-size-l { font-size: $sc-font-size-l; }
+.font-size-m { font-size: $sc-font-size-m; }
+.font-size-sm { font-size: $sc-font-size-sm; }
+.font-size-xs { font-size: $sc-font-size-xs; }
+
+.break-all {
+  word-break: break-all;
+}
+
+%md-shadow { box-shadow: $sc-box-shadow; }
+
+.md-shadow {
+  @extend %md-shadow;
+}
+
+.round { border-radius: $sc-border-radius; }

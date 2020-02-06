@@ -1,0 +1,13 @@
+{{yield
+  (hash
+    header=(component
+      "sc-table/header"
+      sortHeaders=(readonly sortHeaders)
+      sortBy=(readonly sortBy)
+      sortAscending=(readonly sortAscending)
+      onSort=(action "handleSort")
+    )
+    row=(component "sc-table/row")
+    displayData=(readonly displayData)
+  )
+}}

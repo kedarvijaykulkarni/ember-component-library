@@ -1,0 +1,32 @@
+@import 'ember-component-library';
+
+$code-bg-color: #f5f5f5;
+
+body {
+  overflow-x: none;
+}
+
+code,
+.docs-bg-grey-lightest {
+    background-color: $code-bg-color;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+.docs-viewer {
+  background: white;
+}
+
+.docs-overflow-y-scroll {
+  overflow-y: auto;
+}
+
+.md\:docs-overflow-y-scroll {
+  overflow-y: auto;
+ }
+
+:root {
+  --brand-primary: #0c5bc2;
+}

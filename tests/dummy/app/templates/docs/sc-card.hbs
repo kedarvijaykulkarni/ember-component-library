@@ -1,0 +1,59 @@
+<h1>sc-card</h1>
+
+{{#sc-component-demo title="Card Default" as |demo|}}
+  {{#demo.example}}
+    {{#sc-card as |card|}}
+      {{#card.title}}Card Title{{/card.title}}
+      {{#card.content}}
+        This is the card conent
+      {{/card.content}}
+      <hr class="w-100">
+      {{#card.footer}}
+        This is a footer
+      {{/card.footer}}
+    {{/sc-card}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="card-default"}}
+      {{#sc-card as |card|}}
+        {{#card.title}}Card Title{{/card.title}}
+        {{#card.content}}
+          This is the card conent
+        {{/card.content}}
+        <hr class="w-100">
+        {{#card.footer}}
+          This is a footer
+        {{/card.footer}}
+      {{/sc-card}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}
+
+{{#sc-component-demo title="Card Raised" as |demo|}}
+  {{#demo.example}}
+    {{#sc-card raised=true as |card|}}
+      {{#card.title}}Card Title{{/card.title}}
+      {{#card.content}}
+        This is the card content
+      {{/card.content}}
+      <hr class="w-100">
+      {{#card.footer}}
+        This is a footer
+      {{/card.footer}}
+    {{/sc-card}}
+  {{/demo.example}}
+  {{#demo.code}}
+    {{#docs-snippet name="card-default"}}
+      {{#sc-card raised=true as |card|}}
+        {{#card.title}}Card Title{{/card.title}}
+        {{#card.content}}
+          This is the card content
+        {{/card.content}}
+        <hr class="w-100">
+        {{#card.footer}}
+          This is a footer
+        {{/card.footer}}
+      {{/sc-card}}
+    {{/docs-snippet}}
+  {{/demo.code}}
+{{/sc-component-demo}}

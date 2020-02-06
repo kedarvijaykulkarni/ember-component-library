@@ -1,0 +1,57 @@
+{{#sc-heading}}sc-dialog{{/sc-heading}}
+
+{{#sc-heading size=2}}Dialog Default{{/sc-heading}}
+
+<p>Clicking the button below will open a dialog with a header, content, and footer section.</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="dialog-demo-default.hbs"}}
+    {{#sc-button click=(action (mut exampleOneOpen) true)}}Click Me{{/sc-button}}
+    {{#if exampleOneOpen}}
+      {{#sc-dialog as |dialog|}}
+        {{#dialog.header}}
+          {{#sc-heading class="color-white"}}Dialog Title{{/sc-heading}}
+          {{sc-button icon="clear" click=(action (mut exampleOneOpen) false) text=true}}
+        {{/dialog.header}}
+        {{#dialog.content}}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum dui quis tincidunt dignissim. Vestibulum posuere, lorem sit amet facilisis consequat, ligula neque vestibulum sapien, at bibendum tellus enim vel nunc. Praesent sit amet mollis elit. Nam pellentesque massa magna, in eleifend ante semper nec. Nunc at egestas velit. Cras luctus, nisi non commodo dictum, quam lectus eleifend lacus, non dapibus mauris ante et justo. Vivamus pharetra, tortor luctus imperdiet fringilla, turpis quam consectetur dui, vitae iaculis elit massa ac eros. Donec ut mauris ut velit mollis dignissim a quis arcu. Morbi nunc diam, aliquam et faucibus ut, sodales in mauris. Morbi turpis nulla, pulvinar ac massa vel, sagittis dignissim nisi.</p>
+          <p>Etiam pellentesque a nisi non scelerisque. Maecenas volutpat hendrerit urna in luctus. Vivamus id nisl non ipsum tempus commodo. Duis eget mauris neque. Ut facilisis lectus nec orci blandit ornare. Vivamus consectetur imperdiet arcu, eget pharetra lorem auctor quis. Mauris luctus enim a nunc elementum gravida. Pellentesque in turpis in dolor blandit fermentum.</p>
+          <p>Sed lobortis convallis semper. Pellentesque at risus porttitor, congue nisi vel, scelerisque nisi. In ac porta mauris. Proin diam augue, cursus sed commodo condimentum, sollicitudin ut nibh. Nunc tristique purus ut dolor placerat tincidunt. Pellentesque at hendrerit felis. Etiam lobortis iaculis purus, vel porttitor nulla pretium vel. Nam vel pellentesque ligula. Proin tempus convallis vehicula. Aenean erat ante, suscipit vitae neque ultrices, iaculis fermentum enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu tortor, condimentum non quam vitae, luctus commodo est.</p>
+          <p>Nam laoreet est vel felis efficitur consectetur. Mauris vestibulum interdum mi, non egestas ligula. Etiam dignissim erat ut magna egestas hendrerit. Etiam vehicula felis ac egestas imperdiet. Aenean interdum ornare mauris, eget posuere leo fringilla pharetra. Nunc sollicitudin a lacus a auctor. Ut maximus, odio id luctus porttitor, lectus enim ultrices orci, ut accumsan orci lorem commodo mauris. Curabitur tristique est sit amet tincidunt condimentum. Morbi at auctor neque.</p>
+          <p>Nam consectetur turpis eget nunc sodales, sed pellentesque leo tristique. Morbi bibendum arcu vel justo eleifend, et aliquam velit interdum. Nullam varius urna quis ipsum dictum pulvinar. Integer non efficitur magna, nec consectetur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Duis consectetur laoreet arcu id fringilla. Duis tellus eros, sagittis bibendum efficitur vel, rutrum a ex.</p>
+          <p>Nam consectetur turpis eget nunc sodales, sed pellentesque leo tristique. Morbi bibendum arcu vel justo eleifend, et aliquam velit interdum. Nullam varius urna quis ipsum dictum pulvinar. Integer non efficitur magna, nec consectetur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Duis consectetur laoreet arcu id fringilla. Duis tellus eros, sagittis bibendum efficitur vel, rutrum a ex.</p>
+          <p>Nam consectetur turpis eget nunc sodales, sed pellentesque leo tristique. Morbi bibendum arcu vel justo eleifend, et aliquam velit interdum. Nullam varius urna quis ipsum dictum pulvinar. Integer non efficitur magna, nec consectetur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Duis consectetur laoreet arcu id fringilla. Duis tellus eros, sagittis bibendum efficitur vel, rutrum a ex.</p>
+          <p>Nam consectetur turpis eget nunc sodales, sed pellentesque leo tristique. Morbi bibendum arcu vel justo eleifend, et aliquam velit interdum. Nullam varius urna quis ipsum dictum pulvinar. Integer non efficitur magna, nec consectetur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Duis consectetur laoreet arcu id fringilla. Duis tellus eros, sagittis bibendum efficitur vel, rutrum a ex.</p>
+          <p>Nam consectetur turpis eget nunc sodales, sed pellentesque leo tristique. Morbi bibendum arcu vel justo eleifend, et aliquam velit interdum. Nullam varius urna quis ipsum dictum pulvinar. Integer non efficitur magna, nec consectetur dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Duis consectetur laoreet arcu id fringilla. Duis tellus eros, sagittis bibendum efficitur vel, rutrum a ex.</p>
+        {{/dialog.content}}
+        {{#dialog.footer}}
+          {{#sc-button icon-left="chevron_left" text=true}} BACK{{/sc-button}}
+          {{#sc-button icon-right="chevron_right" text=true}} NEXT{{/sc-button}}
+        {{/dialog.footer}}
+      {{/sc-dialog}}
+    {{/if}}
+  {{/demo.example}}
+  {{demo.snippet "dialog-demo-default.hbs"}}
+{{/docs-demo}}
+
+{{#sc-heading size=2}}No Header/Footer Dialog{{/sc-heading}}
+
+<p>You do not need to use the header or footer components inside of your dialog. If you don't include the content component, the styles might get a bit weird though.</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="dialog-demo-only-content.hbs"}}
+    {{#sc-button click=(action (mut exampleThreeOpen) true)}}Click Me{{/sc-button}}
+    {{#if exampleThreeOpen}}
+      {{#sc-dialog as |dialog|}}
+        {{#dialog.content}}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum dui quis tincidunt dignissim. Vestibulum posuere, lorem sit amet facilisis consequat, ligula neque vestibulum sapien, at bibendum tellus enim vel nunc. Praesent sit amet mollis elit. Nam pellentesque massa magna, in eleifend ante semper nec. Nunc at egestas velit. Cras luctus, nisi non commodo dictum, quam lectus eleifend lacus, non dapibus mauris ante et justo. Vivamus pharetra, tortor luctus imperdiet fringilla, turpis quam consectetur dui, vitae iaculis elit massa ac eros. Donec ut mauris ut velit mollis dignissim a quis arcu. Morbi nunc diam, aliquam et faucibus ut, sodales in mauris. Morbi turpis nulla, pulvinar ac massa vel, sagittis dignissim nisi.</p>
+          <p>Etiam pellentesque a nisi non scelerisque. Maecenas volutpat hendrerit urna in luctus. Vivamus id nisl non ipsum tempus commodo. Duis eget mauris neque. Ut facilisis lectus nec orci blandit ornare. Vivamus consectetur imperdiet arcu, eget pharetra lorem auctor quis. Mauris luctus enim a nunc elementum gravida. Pellentesque in turpis in dolor blandit fermentum.</p>
+          <div class="flex justify-center">
+            {{#sc-button color="primary" click=(action (mut exampleThreeOpen) false)}}Okay, seems good{{/sc-button}}
+          </div>
+        {{/dialog.content}}
+      {{/sc-dialog}}
+    {{/if}}
+  {{/demo.example}}
+  {{demo.snippet "dialog-demo-only-content.hbs"}}
+{{/docs-demo}}

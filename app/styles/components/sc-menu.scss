@@ -1,0 +1,7 @@
+.ember-basic-dropdown-content {
+  @extend .flex, .flex-column, %md-shadow;
+
+  > .sc-button {
+    @extend .justify-start;
+  }
+}

@@ -1,0 +1,15 @@
+{{#each sortHeaders as |header|}}
+  {{#sc-table/th
+    click=(action onSort header.attr)
+    sorted=(eq header.attr sortBy)
+    asc=sortAscending
+  }}
+    {{header.name}}
+  {{/sc-table/th}}
+{{/each}}
+
+{{yield
+  (hash
+    th=(component "sc-table/th")
+  )
+}}

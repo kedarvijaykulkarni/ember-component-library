@@ -1,0 +1,9 @@
+.sc-safewire-logo {
+  @extend .flex, .flex-column, .items-center;
+  color: #3d3d3d;
+
+  > h1 {
+    font-size: 39px;
+    margin-bottom: 0;
+  }
+}
