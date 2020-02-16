@@ -1,4 +1,4 @@
-ember-component-library
+safechain-component-library
 ==============================================================================
 
 [Short description of the addon.]
@@ -8,7 +8,7 @@ Installation
 
 Add the following to your projects `devDependencies` in `package.json`.
 ```
-"ember-component-library": "git@github.com:kedarvijaykulkarni/ember-component-library.git",
+"safechain-component-library": "github:Safechain/safechain-component-library",
 ```
 
 
@@ -24,7 +24,7 @@ Contributing
 ### Installation
 
 * `git clone <repository-url>`
-* `cd ember-component-library`
+* `cd safechain-component-library`
 * `npm install`
 
 ### Linting

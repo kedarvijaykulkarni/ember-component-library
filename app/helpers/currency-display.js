@@ -1,1 +1,1 @@
-export { default, currencyDisplay } from 'ember-component-library/helpers/currency-display';
+export { default, currencyDisplay } from 'safechain-component-library/helpers/currency-display';

@@ -1,5 +1,5 @@
 {
-  "name": "ember-component-library",
+  "name": "safechain-component-library",
   "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
@@ -70,5 +70,5 @@
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-  "homepage": "https://github.com/kedarvijaykulkarni/ember-component-library"
+  "homepage": "https://Safechain.github.io/safechain-component-library"
 }

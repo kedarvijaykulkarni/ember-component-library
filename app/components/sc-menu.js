@@ -1,1 +1,1 @@
-export { default } from 'ember-component-library/components/sc-menu';
+export { default } from 'safechain-component-library/components/sc-menu';

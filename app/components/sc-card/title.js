@@ -1,1 +1,1 @@
-export { default } from 'ember-component-library/components/sc-card/title';
+export { default } from 'safechain-component-library/components/sc-card/title';

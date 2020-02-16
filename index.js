@@ -36,7 +36,7 @@ module.exports = {
     if (!basicDropdownConfig || !basicDropdownConfig.destination) {
       if (config.environment !== 'test' && type === 'body-footer' && !config._emberBasicDropdownContentForInvoked) {
         config._emberBasicDropdownContentForInvoked = true;
-        return '<div id="ember-basic-dropdown-wormhole"></div><div id="ember-component-library-wormhole"></div>';
+        return '<div id="ember-basic-dropdown-wormhole"></div><div id="safechain-component-library-wormhole"></div>';
       }
     }
   }

@@ -10,7 +10,7 @@ Use `sc-divider` to distinguish portions of the UI:
       <p>Forgot password</p>
     {{/link-to}}
   <ScDivider/>
-  <p>By signing in you agree to the Kedar's Privacy Policy</p>
+  <p>By signing in you agree to the <a href="http://www.safewire.com/terms-conditions/" target="_new">SafeChain Terms of Use</a> and <a href="http://www.safewire.com/privacy-policy/" target="_new">SafeChain Privacy Policy</a>.</p>
   {{/demo.example}}
 
   {{demo.snippet "sc-divider.hbs"}}
