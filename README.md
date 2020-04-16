@@ -1,4 +1,4 @@
-safechain-component-library
+ember-component-library
 ==============================================================================
 
 [Short description of the addon.]
